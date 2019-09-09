@@ -1,0 +1,85 @@
+.container{
+  height:1200px;
+  padding:10px;
+  width:60%;
+  background-image: linear-gradient(to bottom, rgb(116, 116, 116), rgb(82, 82, 82), rgb(50,50,50));
+}
+
+h1{
+  margin:20px;
+  font-size:2.6em;
+  color:rgb(10, 10, 10);
+  text-shadow: rgb(54, 54, 54) 2px 2px;
+}
+
+.container-inner, .container{
+  display:block;
+}
+
+.container1{
+  display:flex;
+  margin:10px;
+  background-color: rgb(201, 201, 201);
+  padding:10px;
+  align-items: center;
+}
+
+.end-screen{
+  font-size: 5em;
+  color:rgb(87, 6, 87);
+  transform: translateY(200%);
+}
+
+.SmallC{
+  margin:10px;
+  width:10%;
+}
+
+.palette{
+  position:absolute;
+  background-color: grey;
+  width:7%;
+  display:block;
+  transform: scale(1.2);
+}
+
+.no-show{
+  display:none;
+}
+
+.circle{
+  float:left;
+}
+
+.div-btn{
+  height:50px;
+}
+
+.btn{
+  margin-left:20px;
+  border-radius:30%;
+  height:50px;
+  background-color: rgb(168, 168, 168);
+}
+
+.btn:hover{
+  background-color: rgb(116, 116, 116);
+}
+
+@media only screen and (max-width:940px){
+  .palette{
+  width:10%;
+  }
+  .SmallC{
+    width:15%;
+  }
+}
+
+@media only screen and (max-width:600px){
+  .palette{
+  width:20%;
+  }
+  .SmallC{
+    width:25%;
+  }
+}

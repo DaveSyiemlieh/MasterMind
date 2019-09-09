@@ -1,0 +1,74 @@
+.container{
+  display:block;
+  margin: 0 auto;
+  width : 40%;
+  height : 500px;
+  background-color: rgb(57, 24, 83);
+  border:solid 5px;
+  border-color: rgb(0, 0, 0);
+}
+
+h1{
+  text-align: center;
+  padding : 0 10px;
+}
+
+.container button{
+  background-color: rgb(57, 24, 83);
+  display:block;
+  font-size: 1.2em;
+  color: rgb(99, 15, 168);
+  border : solid 2px;
+  border-color: rgb(57, 24, 83);
+  width:25%;
+  height:60px;
+  float: left;
+  margin : 0;
+  font : 10px;
+}
+
+.container .Recall{
+  width:100%;
+}
+
+.out{
+  display:block;
+  width:93%;
+  height:1.2em;
+  border : solid;
+  border-color: #000;
+  font-size : 2em;
+  padding: 15px;
+  text-align:right;
+  background-color: lightgray;
+}
+
+.history{
+  display:none;
+}
+
+.history-show{
+  position: absolute;
+  display:block;
+  margin:0 auto;
+  width:40%;
+  background-color: rgb(92, 67, 112);
+  font-size:1.6em;
+  text-align : center;
+  transition: .5s ease-in;
+}
+
+.history-show:hover{
+  background-color : rgb(125, 94, 150);
+  color : #fff;
+}
+
+li{
+  padding:10px;
+  list-style-type: none;
+}
+
+li:hover{
+  background-color:rgb(66, 46, 83);
+  color : #fff;
+}

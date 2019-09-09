@@ -1,0 +1,22 @@
+.container{
+  display: block;
+}
+
+textarea{
+  margin:20px;
+  padding :10px;
+  float:left;
+  width:40%;
+  height:1000px;
+  text-align:left;
+}
+
+.content{
+  margin:20px;
+  padding : 10px;
+  float:left;
+  width:40%;
+  height:1000px;
+  color : #fff;
+  background-color: #000;
+}
