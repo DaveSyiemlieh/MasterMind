@@ -1,33 +1,41 @@
 .container{
-  height:1200px;
-  padding:10px;
-  width:60%;
-  background-image: linear-gradient(to bottom, rgb(116, 116, 116), rgb(82, 82, 82), rgb(50,50,50));
+  display:block;
+  box-sizing:border-box;
+  height:auto;
+  padding:2rem 5rem;
+  width:40vw;
+  margin:0 auto;
+  background-image: linear-gradient(to bottom, #1CB5E0,#02024d);
+}
+
+.container-inner{
+  display:block;
+  width:100%;
+  height:auto;
 }
 
 h1{
   margin:20px;
   font-size:2.6em;
-  color:rgb(10, 10, 10);
-  text-shadow: rgb(54, 54, 54) 2px 2px;
+  font-weight:800;
+  color:rgb(0, 0, 7);
 }
 
-.container-inner, .container{
-  display:block;
-}
 
 .container1{
-  display:flex;
-  margin:10px;
-  background-color: rgb(201, 201, 201);
-  padding:10px;
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  width:100%;
+  background: linear-gradient(to right,#56CCF2,rgb(91, 147, 219) );
   align-items: center;
+  border: 1px solid #000;
 }
 
 .end-screen{
-  font-size: 5em;
-  color:rgb(87, 6, 87);
-  transform: translateY(200%);
+  display:block;
+  margin:0 auto;
+  color:#fff;
+  font-size:2rem;
 }
 
 .SmallC{
@@ -37,7 +45,7 @@ h1{
 
 .palette{
   position:absolute;
-  background-color: grey;
+  background-color: rgba(216, 216, 216, 0.808);
   width:7%;
   display:block;
   transform: scale(1.2);
@@ -51,35 +59,78 @@ h1{
   float:left;
 }
 
-.div-btn{
-  height:50px;
-}
+
 
 .btn{
-  margin-left:20px;
-  border-radius:30%;
+  border-radius:50%/10%;
   height:50px;
-  background-color: rgb(168, 168, 168);
+  background-color: rgb(255, 255, 255);
 }
 
 .btn:hover{
-  background-color: rgb(116, 116, 116);
+  background-color: rgb(44, 44, 44);
+  color:#fff;
 }
 
-@media only screen and (max-width:940px){
+.BigC{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+}
+
+.Rules{
+  display:block;
+  position:fixed;
+  box-sizing: border-box;
+  padding:3rem;
+  top:0%;
+  left:0%;
+  width:100%;
+  height:100%;
+  background:#fff;
+}
+
+.help{
+  display:block;
+  margin-left: auto;
+  padding:6px;
+}
+
+@media only screen and (max-width:800px){
   .palette{
   width:10%;
   }
   .SmallC{
     width:15%;
   }
+  .BigC{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+  }
+  #Head{
+    font-size: 1.6rem;
+  }
+  .btn{
+    height:30px;
+  }
 }
 
-@media only screen and (max-width:600px){
-  .palette{
-  width:20%;
+@media screen and (max-width: 1000px){
+  .container{
+    width:90vw;
   }
-  .SmallC{
-    width:25%;
+  #Head{
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 420px){
+  #Head{
+    font-size:1rem;
+  }
+  .container{
+    width:420px;
+  }
+  .container1 {
+    width:200px;
   }
 }

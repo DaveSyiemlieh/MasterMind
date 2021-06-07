@@ -1,10 +1,11 @@
 import React from 'react';
-import Row from './components2/Row';
+import Row from './Components/Row';
 
 class Mastermind extends React.Component {
   state = {
     end: false,
     lose: false,
+    showRules: false,
     correct: [],
     isTurn: 1,
     list: [{
@@ -61,12 +62,16 @@ class Mastermind extends React.Component {
     }));
   }
 
+  handleRules = ()=>{
+    this.setState(prevState=>({showRules:!prevState.showRules}));
+  }
   render() {
     let xTurn = this.state.isTurn;
     return (
       <div className="container">
-      <h1>MASTERMIND</h1>
-        <div className={this.state.end || this.state.lose? "no-show" : "container-inner"}>
+        <p className="help" onClick={this.handleRules}>HELP</p>
+        <h1 id="Head">MASTERMIND</h1>
+        <div className={this.state.end || this.state.lose ? "no-show" : "container-inner"}>
           <Row key='1'
             id='1'
             correct={this.state.correct}
@@ -153,8 +158,24 @@ class Mastermind extends React.Component {
           YOU WIN
           </div>
         <div className={this.state.lose ? "end-screen" : "no-show"}>
-          BETTER LUCK NEXT TIME
+          BETTER LUCK NEXT TIME!
           </div>
+        <div className={this.state.showRules ? "Rules" : "no-show"}>
+          <h1>RULES</h1>
+          <ul>
+            <li>Guess the correct combination by clicking on the white circles and choosing a color for all 4 GUESS circles.</li>
+            <li>Click on the the on "Check" Button to check whether your answer is correct.</li>
+            <li>On Clicking the "Check" button, there will be 4 semi circles that hint you towards the correct answer</li>
+            <li>
+              <ul>
+                <li>Green: Correct Color in the correct position</li>
+                <li>Red: Correct Color in the wrong position</li>
+                <li>White: Wrong Color</li>
+              </ul>
+            </li>
+            <li>The CHECK circles(Appearing On the Right after clicking "CHECK") do not represent the position of the actual correct answer, it is only an INDICATION. For eg. Green for the first CHECK circle does not mean that the first GUESS circle was correct, it only indicates that ONE of your GUESS circles were correct.</li>
+          </ul>
+        </div>
       </div>
     );
   }
